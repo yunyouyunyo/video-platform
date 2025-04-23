@@ -1,0 +1,13 @@
+<h2>新增影片</h2>
+<form action="/home/add-video" method="POST">
+  <div>
+    <label>影片標題：</label>
+    <input type="text" name="title" placeholder="輸入影片標題" required />
+  </div>
+  <div>
+    <label>影片連結：</label>
+    <input type="url" name="url" placeholder="輸入影片連結" required />
+  </div>
+  <button type="submit">送出新增</button>
+</form>
+<a href="/home">« 回列表</a>

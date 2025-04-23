@@ -1,0 +1,21 @@
+<h2>歡迎，<%= user.username %>！</h2>
+<a href="/logout">登出</a>
+
+<h2>影集列表</h2>
+
+<% if (typeof videos==='undefined' ) { %>
+    <p>沒有影片資料</p>
+    <% } else { %>
+        <ul>
+            <% videos.forEach(video=> { %>
+                <li>
+                    <a href="<%= video.url %>" target="_blank">
+                        <%= video.title %>
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
+        <% } %>
+
+            <!-- 新增影片按鈕 -->
+            <a href="/home/add-video"><button type="button">Add video</button></a>
