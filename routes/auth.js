@@ -23,8 +23,8 @@ router.post('/register', async (req, res) => {
       [username, hashed]
     );
 
-    connection.release();
-    console.log('DB INSERT OK:', results);
+      connection.release();
+      console.log('DB INSERT OK:', results);
     res.redirect('/login');
   }
   catch (err) {

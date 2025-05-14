@@ -30,11 +30,11 @@ router.get('/add-video', (req, res) => {
 // 接收表單提交
 router.post('/add-video', async (req, res) => {
     try {
-        const { title, url } = req.body;
+        const { title, url, description, category } = req.body;
         const connection = await db.getConnection();
         const [results] = await connection.execute(
-            'INSERT INTO videos (title, url) VALUES (?, ?)',
-            [title, url]
+            'INSERT INTO videos (title, url,description,category) VALUES (?, ?, ?, ?)',
+            [title, url, description, category]
         );
         connection.release();
         console.log('Success add video');

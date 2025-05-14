@@ -6,6 +6,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
 const path = require('path');
 
@@ -28,6 +29,10 @@ app.use('/home', homeRoutes);
 // 路由
 const authRoutes = require('./routes/auth');
 app.use('/', authRoutes);
+
+const videoRoutes = require('./routes/video');
+app.use('/',videoRoutes);
+
 
 // 在 app.js 最後面加入
 app.get('/ping', (req, res) => {

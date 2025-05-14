@@ -4,5 +4,24 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #9c1115;
+}
+/* public/styles.css */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+a {
+  color: #9e1c41;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
